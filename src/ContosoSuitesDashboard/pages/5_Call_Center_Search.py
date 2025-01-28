@@ -38,7 +38,7 @@ def make_cosmos_db_vector_search_request(query_embedding, max_results=5,minimum_
     cosmos_container_name = "CallTranscripts"
 
     # Create a CosmosClient
-    client = CosmosClient(url=cosmos_endpoint, credential=cosmos_key)
+    client = CosmosClient(url=cosmos_endpoint, credential=cosmos_credentials)
     # Load the Cosmos database and container
     database = client.get_database_client(cosmos_database_name)
     container = database.get_container_client(cosmos_credentials)
