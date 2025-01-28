@@ -42,6 +42,7 @@ def main():
     # Display the list of hotels as a drop-down list
     hotels_json = get_hotels().json()
     # Reshape hotels to an object with hotelID and hotelName
+    st.write(hotels_json)
     hotels = [{"id": hotel["hotelID"], "name": hotel["hotelName"]} for hotel in hotels_json]
     st.write(hotels)
     selected_hotel = st.selectbox("Hotel:", hotels, format_func=lambda x: x["name"])
