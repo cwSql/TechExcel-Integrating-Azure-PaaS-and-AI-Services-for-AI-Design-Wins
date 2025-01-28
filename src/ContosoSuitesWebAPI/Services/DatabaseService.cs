@@ -162,7 +162,7 @@ public class DatabaseService(string connectionString) : IDatabaseService
     /// </summary>
     [KernelFunction]
     [Description("Get all bookings with multiple rooms")]
-public async Task<IEnumerable<Booking>> GetBookingsWithMultipleHotelRooms()
+    public async Task<IEnumerable<Booking>> GetBookingsWithMultipleHotelRooms()
     {
         var sql = """
             SELECT
